@@ -220,15 +220,22 @@ a {
     color: aliceblue;
     font-size: 1.2rem;
     align-self: center;
-    padding: 0.6rem;
+    padding: 1.8rem 0.6rem;
     font-family: sans-serif;
 }
 
 .highlight {
-    display: flex;
     background-color: var(--header-text);
     text-decoration: underline aliceblue 2px;
     text-underline-offset: 4px;
+}
+
+.link {
+    display: flex;
+}
+
+.link:hover {
+    background-color: var(--header-text);
 }
 
 .container {
@@ -272,3 +279,47 @@ header img {
     grid-row: 1/-1;
     width: 5rem;
 }
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: var(--secondary-color);
+    color: aliceblue;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    border: none;
+    font-family: sans-serif;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: flex;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 4rem;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: var(--header-text);}
