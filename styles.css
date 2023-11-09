@@ -199,12 +199,11 @@ body {
 }
 
 .navbar {
-    width: 100%;
     height: 5rem;
-    background-color: aliceblue;
+    background-color: var(--secondary-color);
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding-left: 5rem;
+    align-items: stretch;
 }
 
 h3, h4 {
@@ -218,7 +217,18 @@ h3, h4 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: aliceblue;
+    font-size: 1.2rem;
+    align-self: center;
+    padding: 0.6rem;
+    font-family: sans-serif;
+}
+
+.highlight {
+    display: flex;
+    background-color: var(--header-text);
+    text-decoration: underline aliceblue 2px;
+    text-underline-offset: 4px;
 }
 
 .container {
