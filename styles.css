@@ -329,6 +329,7 @@ header img {
   .dropdown:hover .dropbtn {background-color: var(--header-text);} 
   
 .image-container img {
+    display: none;
     width: 100%;
     height: 25rem;
     object-fit: cover;
