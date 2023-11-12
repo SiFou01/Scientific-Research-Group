@@ -236,10 +236,12 @@ a {
 
 .link {
     display: flex;
+    transition: ease-in-out 250ms;
 }
 
 .link:hover {
     background-color: var(--header-text);
+    transition: ease-in-out 250ms;
 }
 
 .container {
@@ -292,6 +294,7 @@ header img {
     font-size: 1.2rem;
     border: none;
     font-family: sans-serif;
+    transition: ease-in-out 250ms;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -323,7 +326,7 @@ header img {
   .dropdown-content a:hover {background-color: #ddd;}
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block; animation: fade-in 1s;}
+  .dropdown:hover .dropdown-content {display: block; animation: fade-in 750ms;}
 
 @keyframes fade-in {
     0% {opacity: 0;}
@@ -331,7 +334,7 @@ header img {
 }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: var(--header-text);} 
+  .dropdown:hover .dropbtn {background-color: var(--header-text); transition: ease-in-out 250ms;} 
   
 .image-container {
     position: relative;
