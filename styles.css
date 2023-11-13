@@ -357,7 +357,9 @@ header img {
 
 .btn {
     position: absolute;
-    top: 40%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -392,7 +394,9 @@ header img {
     height: 13rem;
     width: 30rem;
     bottom: 0rem;
-    left: 33%;
+    left: 0;
+    right: 0;
+    margin: auto;
     background-color: var(--secondary-color);
     color: aliceblue;
     border-radius: 0.5rem 0.5rem 0 0;
