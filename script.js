@@ -4,7 +4,17 @@ const down = [
 ];
 
 const downDuration = {
-    duration : 700,
+    duration : 725,
+    iterations : 1,
+    };
+
+const disappear = [
+    {opacity : "1", offset : 0},
+    {opacity : "0", offset : 1},
+];
+
+const disappearDuration = {
+    duration : 500,
     iterations : 1,
     };
 
@@ -24,16 +34,10 @@ let images = document.querySelectorAll(".image-container img");
 images = Array.from(images);
 
 function nextImage() {
-    images.forEach(image => {
-        image.removeAttribute("style", "display : initial");
-    });
-    if (image_index == 3) {
-        image_index = -1;
-    }
+    images[image_index].animate(disappear, disappearDuration);
+    setTimeout(img, 475, 1);
     imgText[animate].animate(down, downDuration);
     setTimeout(hide, 700, animate, 1);
-    images[image_index + 1].setAttribute("style", "display : initial");
-    image_index++;
     animate++;
     if (animate == 4) {
         animate = 0;
@@ -41,19 +45,33 @@ function nextImage() {
 }
 
 function previousImage() {
-    images.forEach(image => {
-        image.removeAttribute("style", "display : initial");
-    });
-    if (image_index == 0) {
-        image_index = 4;
-    }
+    images[image_index].animate(disappear, disappearDuration);
+    setTimeout(img, 475, 0);
     imgText[animate].animate(down, downDuration);
     setTimeout(hide, 700, animate, 0);
-    images[image_index - 1].setAttribute("style", "display : initial");
-    image_index--;
     animate--;
     if (animate == -1) {
         animate = 3;
+    }
+}
+
+function img(bool) {
+    images.forEach(image => {
+        image.removeAttribute("style", "display : initial");
+    });
+    if (bool) {
+        if (image_index == 3) {
+            image_index = -1;
+        }
+        images[image_index + 1].setAttribute("style", "display : initial");
+        image_index++;
+    }
+    else {
+        if (image_index == 0) {
+            image_index = 4;
+        }
+        images[image_index - 1].setAttribute("style", "display : initial");
+        image_index--;
     }
 }
 
