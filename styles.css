@@ -447,6 +447,60 @@ header img {
     font-family: "Raleway";
 }
 
-.p {
-    height: 40rem;
+.about hr {
+    border: var(--secondary-color) 1px solid;
+    width: 100%;
+}
+
+.subjects {
+    background-color: var(--main-color);
+    margin-bottom: 100rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Raleway";
+}
+
+.subjects p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.subject {
+    background-color: aliceblue;
+    display: grid;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr 2fr;
+    padding-right: 1rem;
+}
+
+.subject img {
+    width: 20rem;
+    grid-row: 1/3;
+}
+
+.right {
+    grid-template-columns: 2fr 1fr;
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+.right img {
+    grid-column: 2/3;
+    justify-self: end;
+}
+
+.subject h3 {
+    padding-top: 1.3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    align-self: center;
+    color: var(--secondary-color);
+}
+
+.subject p {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--header-text);
 }
